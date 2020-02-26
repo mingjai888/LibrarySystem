@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="browseAndSearchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BrowseAndSearchPageController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="118.0" text="Browse/Search :">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="searchItem" prefHeight="27.0" prefWidth="139.0" promptText="eg. Harry Potter" />
+                  <Button mnemonicParsing="false" onAction="#clickOnSearch" text="Search" />
+                  <CheckBox fx:id="bookCheckBox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Book" />
+                  <CheckBox fx:id="DVDCheckBox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="DVD" />
+                  <CheckBox fx:id="laptopCheckBox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Laptop" />
+               </children>
+            </HBox>
+            <ListView fx:id="browseAndSearchList" prefHeight="591.0" prefWidth="1159.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ListView>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0" spacing="50.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clickOnInfo" text="Info" />
+                  <Button mnemonicParsing="false" onAction="#clickOnCheckForCopies" text="Check For Copies" textAlignment="CENTER" />
+                  <Button layoutX="296.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickOnEdit" text="Edit" textFill="#d00d0d" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clickOnBack" text="Back" textAlignment="CENTER" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
